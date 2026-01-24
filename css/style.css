@@ -1,0 +1,232 @@
+/* -------------------------------------- basics */
+:root {
+    --black: #8b6f60;
+    --white: #fdfbf9;
+    /* ----------------------- shadows */
+    --shad1: 0 1px var(--black), 1px 0px var(--black), 0 -1px var(--black), -1px 0px var(--black), 1px -1px var(--black), -1px 1px var(--black), 1px 1px var(--black), -1px -1px var(--black);
+    --shad2: 0 1px var(--black), 1px 0px var(--black), 0 -1px var(--black), -1px 0px var(--black);
+    --shad3: 0 1px white, 1px 0px white, 0 -1px white, -1px 0px white;
+    --outline1: drop-shadow(0px 1px var(--black)) drop-shadow(0 -0.5px var(--black)) drop-shadow(1px 0 var(--black)) drop-shadow(-0.5px 0 var(--black));
+    --outline2: drop-shadow(0px 1px white) drop-shadow(0 -0.5px white) drop-shadow(1px 0 white) drop-shadow(-0.5px 0 white);
+    --outline3: drop-shadow(0px 2px white) drop-shadow(0 -1px white) drop-shadow(2px 0 white) drop-shadow(-1px 0 white);
+}
+
+* {
+    font-family: ms ui gothic;
+    box-sizing: border-box;
+    image-rendering: pixelated;
+    color: var(--black);
+}
+
+body {
+    min-height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+/* -------------------------------------- images */
+
+.blinkie {
+    border: 1px solid;
+    border-radius: 3px;
+    width: 123px;
+}
+
+.text-img {
+    float: left;
+    width: 70px;
+    margin-right: 5px;
+}
+
+.badge {
+    width: 70px;
+}
+
+/* -------------------------------------- selection */
+::selection {
+    color: #e1a1aa;
+    background: #fff4f4;
+}
+/* -------------------------------------- scrollbar */
+
+::-webkit-scrollbar {
+    background: none;
+    width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: url(../graphics/backgrounds/SK-31.gif);
+    background-size: 20px;
+    border: 1px #9ba4a9ad solid;
+    border-radius: 15px;
+}
+
+/* -------------------------------------- extras */
+.dashed-divider {
+    width: -webkit-fill-available;
+    border-bottom: 1px dashed;
+}
+
+.image-divider {
+    width: -webkit-fill-available;
+}
+
+/* -------------------------------------- TEXT */
+h1 {
+    color: white;
+    margin: 0;
+    font-size: 18.5px;
+    text-shadow: var(--shad1);
+    letter-spacing: 2.4px;
+    border-color: var(--black) !important;
+}
+
+h2 {
+    color: white;
+    margin: 0;
+    font-size: 17px;
+    text-shadow: var(--shad1);
+    letter-spacing: 2.4px;
+    border-color: var(--black) !important;
+}
+
+h3 {
+    margin: 0;
+    font-size: 17px;
+    color: var(--black);
+    border-color: var(--black) !important;
+}
+
+p {
+    margin: 0;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+}
+
+/* -------------------------------------- spans */
+.span1 {
+    color: #ffeaee;
+    font-weight: bold;
+    text-shadow: var(--shad2);
+    letter-spacing: 2.4px;
+}
+.span2 {
+    color: #e4f4dc;
+    font-weight: bold;
+    text-shadow: var(--shad2);
+    letter-spacing: 2.4px;
+}
+.span3 {
+    color: #d3e9f4;
+    font-weight: bold;
+    text-shadow: var(--shad2);
+    letter-spacing: 2.4px;
+}
+
+/* -------------------------------------- IMAGES */
+img {
+    user-select: none;
+}
+
+/* -------------------------------------- LINKS */
+a {
+    color: var(--black);
+    letter-spacing: normal;
+    text-shadow: var(--shad3);
+    text-decoration: underline;
+    text-decoration-thickness: 0.5px;
+    color: var(--black) !important;
+}
+
+a:hover {
+    text-decoration-style: dashed;
+    text-decoration-thickness: 0.5px;
+}
+
+/* -------------------------------------- ANIMATONS */
+ @keyframes tilt1 {
+0% {
+transform: rotate(0.5deg);
+}
+50% {
+transform: rotate(0.5deg);
+}
+51% {
+transform: rotate(-0.5deg);
+}
+100% {
+transform: rotate(-0.5deg);
+}
+}
+
+ @keyframes tilt2 {
+0% {
+transform: rotate(1deg);
+}
+50% {
+transform: rotate(1deg);
+}
+51% {
+transform: rotate(-1deg);
+}
+100% {
+transform: rotate(-1deg);
+}
+}
+
+ @keyframes tilt3 {
+0% {
+transform: rotate(2deg);
+}
+50% {
+transform: rotate(2deg);
+}
+51% {
+transform: rotate(-2deg);
+}
+100% {
+transform: rotate(-2deg);
+}
+}
+
+@keyframes tilt4 {
+0% {
+transform: rotate(5deg);
+}
+50% {
+transform: rotate(5deg);
+}
+51% {
+transform: rotate(-5deg);
+}
+100% {
+transform: rotate(-5deg);
+}
+}
+
+ @keyframes tilt5 {
+0% {
+transform: rotate(7deg);
+}
+50% {
+transform: rotate(7deg);
+}
+51% {
+transform: rotate(-7deg);
+}
+100% {
+transform: rotate(-7deg);
+}
+}
+
+ @keyframes spin1 {
+0% {
+transform: rotate(0deg);
+}
+100% {
+transform: rotate(100deg);
+}
+}

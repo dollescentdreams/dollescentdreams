@@ -1,0 +1,25 @@
+#s-m-t-tooltip {
+    max-width: 220px;
+    z-index: 10;
+    margin: 24px 14px 7px 12px;
+    border-image-source: url(../graphics/borders/SP-1.png);
+    border-image-slice: 5;
+    border-image-width: 4px;
+    border-image-repeat: round;
+    border-style: solid;
+    border-radius: 5px;
+    display: flex;
+    background: white;
+}
+
+#s-m-t-tooltip div {
+    border: 1px dashed;
+    padding: 5px;
+    border-radius: 2px;
+    font-size: 13px;
+}
+
+#s-m-t-tooltip div::before {
+    content: url(../graphics/icons/FL-icon9.gif);
+    padding-right: 5px;
+}
